@@ -1,12 +1,12 @@
 {
 	"manifestVersion": 1,
 	"id": "portainer-deploy",
-	"version": "0.1.6",
+	"version": "0.2.6",
 	"name": "Portainer.io deploy",
 	"description": "Deploy resources to Portainer.io",
 	"publisher": "OlliJanatuinen",
     "categories": [
-        "Build and release"
+        "Azure Pipelines"
     ],
     "galleryFlags": [
         "Public"
@@ -28,7 +28,7 @@
 		"type": "ms.vss-endpoint.service-endpoint-type",
 		"targets": ["ms.vss-endpoint.endpoint-types"],
 		"properties": {
-			"name": "portainer",
+			"name": "portainer2",
 			"displayName": "Portainer.io",
 			"url": "https://portainer.example.com",
 			"authenticationSchemes": [

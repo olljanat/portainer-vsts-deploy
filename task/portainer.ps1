@@ -1,6 +1,9 @@
 [CmdletBinding()]
 param()
 
+$env:SYSTEM_CULTURE = 'en-US'
+Import-Module "$PSScriptRoot\ps_modules\VstsTaskSdk"
+
 Trace-VstsEnteringInvocation $MyInvocation
 Import-VstsLocStrings "$PSScriptRoot\task.json"
 

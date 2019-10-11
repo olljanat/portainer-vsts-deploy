@@ -12,13 +12,13 @@
 	"version": {
 		"Major": "0",
 		"Minor": "1",
-		"Patch": "0"
+		"Patch": "1"
 	},
 	"minimumAgentVersion": "1.95.0",
 	"instanceNameFormat": "$(action)",
 	"inputs": [{
 		"name": "PortainerService",
-		"type": "connectedService:Portainer",
+		"type": "connectedService:Portainer2",
 		"label": "Portainer.io endpoint",
 		"defaultValue": "",
 		"required": true,
@@ -112,10 +112,15 @@
 	}],
 	"execution": {
 		"PowerShell3": {
-			"target": "$(currentDirectory)\\portainer.ps1",
+			"target": "portainer.ps1",
 			"argumentFormat": "",
 			"workingDirectory": "$(currentDirectory)",
 			"platforms": ["windows"]
+		},
+		"Node": {
+			"target": "portainer.js",
+			"argumentFormat": "",
+			"workingDirectory": "$(currentDirectory)"
 		}
 	}
 }
